@@ -10,26 +10,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ramon.gabarito.domain.Prova;
-import com.ramon.gabarito.service.ProvaService;
+import com.ramon.gabarito.domain.Cursinho;
+import com.ramon.gabarito.service.CursinhoService;
 
 @RestController
-@RequestMapping(value="/prova")
-public class ProvaResource {
+@RequestMapping("/cursinho")
+public class CursinhoResource {
 
 	@Autowired
-	private ProvaService provaService;
+	private CursinhoService cursinhoService;
 	
 	@PostMapping()
-	public void salvar(@RequestBody Prova prova) {
-		provaService.salvar(prova);	
+	public void salvar(@RequestBody Cursinho cursinho) {
+		cursinhoService.salvar(cursinho);
 	}
-	
 	
 	@GetMapping()
-	public ResponseEntity<List<Prova>> buscar() {
-		List<Prova> lista =  provaService.listaProvas();	
+	public ResponseEntity<List<Cursinho>> buscar() {
+		List<Cursinho> lista =  cursinhoService.listar();	
 	return ResponseEntity.ok().body(lista);
 	}
+	
+	
 	
 }

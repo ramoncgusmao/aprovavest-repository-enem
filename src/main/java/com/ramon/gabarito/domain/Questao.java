@@ -9,10 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Questao {
 
 	@Id
@@ -24,8 +30,9 @@ public class Questao {
 	private CursinhoProva cursinhoProva;
 
 	private int numero;
-	@ManyToOne
-	@JoinColumn(name = "id_tipo_prova")
+	
+	
+	@Enumerated(value = EnumType.ORDINAL)
 	private TipoProva tipoProva;
 
 	private char letra;
