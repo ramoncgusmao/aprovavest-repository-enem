@@ -1,6 +1,8 @@
 package com.ramon.gabarito.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,4 +29,7 @@ public class Questao {
 	private TipoProva tipoProva;
 
 	private char letra;
+	
+	@Enumerated(value = EnumType.ORDINAL)
+	private Idioma idioma;
 }
