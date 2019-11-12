@@ -32,4 +32,10 @@ public class ProvaResource {
 	return ResponseEntity.ok().body(lista);
 	}
 	
+	
+	
+	@PostMapping("/lista")
+	public void salvar(@RequestBody List<Prova> provas) {
+		provaService.salvarLista(provas);	
+	}
 }

@@ -25,9 +25,6 @@ public class Prova {
 	@Column(length = 15)
 	private String cor;
 	
-	@Column(length = 100)
-	private String frase;
-	
 	private int dia;
 	
 }

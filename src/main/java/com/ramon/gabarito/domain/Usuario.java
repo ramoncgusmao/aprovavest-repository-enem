@@ -21,4 +21,6 @@ public class Usuario {
 	
 	@Column(length = 120)
 	private String email;
+	
+	private String senha;
 }

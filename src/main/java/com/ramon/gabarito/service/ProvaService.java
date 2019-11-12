@@ -23,4 +23,9 @@ public class ProvaService {
 	public List<Prova> listaProvas(){
 		return provaRepository.findAll();
 	}
+
+	public void salvarLista(List<Prova> provas) {
+		provaRepository.saveAll(provas);
+		
+	}
 }

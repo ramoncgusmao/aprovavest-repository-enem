@@ -18,8 +18,8 @@ public class Resposta {
 	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_usuario")
-	private Usuario usuario;
+	@JoinColumn(name = "id_estudante")
+	private Estudante estudante;
 	
 	private int numero;
 	
