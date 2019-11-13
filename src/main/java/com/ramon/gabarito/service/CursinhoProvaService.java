@@ -1,9 +1,12 @@
 package com.ramon.gabarito.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ramon.gabarito.domain.CursinhoProva;
+import com.ramon.gabarito.domain.Prova;
 import com.ramon.gabarito.repository.CursinhoProvaRepository;
 
 @Service
@@ -19,4 +22,7 @@ public class CursinhoProvaService {
 	
 	}
 
+	public List<CursinhoProva> CursinhoProva(Prova prova1, Prova prova2) {
+	
+	}
 }
