@@ -22,7 +22,8 @@ public class CursinhoProvaService {
 	
 	}
 
-	public List<CursinhoProva> CursinhoProva(Prova prova1, Prova prova2) {
+	public List<CursinhoProva> listarProvaCursinho(Prova prova1) {
 	
+		 return repository.findByProva(prova1);
 	}
 }

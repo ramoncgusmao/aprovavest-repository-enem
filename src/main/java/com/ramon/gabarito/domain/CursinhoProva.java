@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,6 +37,7 @@ public class CursinhoProva {
 	private Prova prova;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cursinhoProva")
+    @OrderBy("numero ASC")
 	private List<Questao> questoes;
 	
 }
