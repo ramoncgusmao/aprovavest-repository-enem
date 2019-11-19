@@ -11,7 +11,7 @@ public class QuestaoDTO {
 
 	private int id;
 	private int numero;
-	private int tipoProva;
+
 	private char letra;
 	private int idioma;
 	
@@ -20,7 +20,7 @@ public class QuestaoDTO {
 		return Questao
 				.builder()
 				.numero(numero)
-				.tipoProva(TipoProva.toEnum(this.tipoProva))
+
 				.letra(letra)
 				.idioma(Idioma.toEnum(this.idioma))
 				.build();
